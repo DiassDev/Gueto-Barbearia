@@ -1,0 +1,119 @@
+
+.navigationContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.025);
+    padding: 0 48px;
+    box-sizing: border-box;
+}
+
+
+
+.navLogo {
+  background-image: url('/GuetoLogo.png'); 
+  
+  width: 120px;
+  height: 120px;
+  
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+}
+
+
+.navBarElements {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    text-decoration: none;
+}
+
+
+.navBarElements a {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-style: italic;
+    font-size: 20px;
+    opacity: 0.80;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+
+.navBarElements a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 1.5px;
+    background-color: #DE372E;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.navBarElements a:hover {
+    opacity: 1;
+}
+
+.navBarElements a:hover::after {
+    transform: scaleX(1);
+}
+
+
+.navBarElements a:focus-visible {
+    opacity: 1;
+    outline: 2px solid #DE372E;
+    outline-offset: 6px;
+}
+
+
+.navigationCta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    width: 186px;
+    height: 54px;
+    background-color: #DE372E;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.3s ease;
+}
+
+.navigationCta:hover {
+    background-color: #C93129;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(222, 55, 46, 0.16);
+}
+
+.navigationCta:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.navigationCta:focus-visible {
+    outline: 2px solid #DE372E;
+    outline-offset: 4px;
+}

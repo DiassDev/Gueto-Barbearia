@@ -1,0 +1,23 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --bg: #FFFBFB;
+  --satoshi: "Satoshi", sans-serif;
+
+  font-family: var(--satoshi);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
