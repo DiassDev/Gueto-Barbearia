@@ -9,11 +9,8 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.72);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.025);
     padding: 0 48px;
     box-sizing: border-box;
 }
@@ -22,20 +19,19 @@
 
 .navLogo {
   background-image: url('/GuetoLogo.png'); 
-  
   width: 120px;
   height: 120px;
-  
   background-size: cover;       
   background-position: center;  
   background-repeat: no-repeat; 
+  cursor: pointer;
 }
 
 
 .navBarElements {
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 36px;
     text-decoration: none;
 }
 
@@ -45,7 +41,7 @@
     display: inline-block;
     cursor: pointer;
     font-style: italic;
-    font-size: 20px;
+    font-size: 18px;
     opacity: 0.80;
     text-decoration: none;
     transition: opacity 0.3s ease;

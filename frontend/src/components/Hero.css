@@ -1,0 +1,154 @@
+
+/* ---------- Hero: ocupa 100% da tela, colada no bottom, sem scroll ---------- */
+.hero {
+  --bg: #fdf9f8;
+  --ink: #141414;
+
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  box-sizing: border-box;
+  /* reserva o espaço da navbar (sobreposta) + uma folga antes do conteúdo */
+  padding-top: calc(var(--nav-h, 120px) + var(--hero-gap, clamp(24px, 5svh, 64px)));
+  container-type: size; /* cqw/cqh passam a valer a área livre (sem o padding) */
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* Palco da composição: sempre a maior caixa 720:473 que cabe na hero,
+   centralizada e colada embaixo. Tudo dentro escala junto (cqw). */
+.hero__stage {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  translate: -50% 0;
+  width: min(100cqw, 152.2cqh * var(--scale, 1.15)); /* 720 / 473 = 1.522 */
+  aspect-ratio: 720 / 473;
+  container-type: inline-size;
+}
+
+/* ---------- Camadas ---------- */
+.hero__layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  will-change: transform;
+}
+.hero__layer--text   { z-index: 1; }
+.hero__layer--person { z-index: 2; }
+
+/* ---------- Label ---------- */
+.hero__label {
+  position: absolute;
+  z-index: 3;
+  left: 50.3%;
+  translate: -50% 0;
+  top: 13.5%;
+  font-size: 1.5cqw;
+  font-weight: 400;
+  white-space: nowrap;
+  background: linear-gradient(180deg, #2e2e2e, #6b6b6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Título ---------- */
+.hero__title {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  font-size: 5.5cqw;
+  font-weight: 800; /* Satoshi não tem 800: cai em 900. Use 700 ou 900 */
+  line-height: 0.92;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Linhas ---------- */
+.hero__stack {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.hero__stack--left  { right: 52%;  top: 20%; }
+.hero__stack--right { left: 60.7%; top: 53.2%; }
+
+.hero__line {
+  display: flex;
+  align-items: center;
+  gap: 0.15em;
+  white-space: nowrap;
+}
+.hero__line--em { position: absolute; left: 57.8%; top: 44%; }
+.hero__line-inner { display: block; }
+
+/* texto cinza em degradê (SEU CABELO / COROA) */
+.is-gray .hero__line-inner,
+.is-gray.hero__line-inner {
+  background: linear-gradient(90deg, #2e2e2e, #6b6b6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Typewriter ---------- */
+.hero__char { position: relative; }
+
+.hero__char.is-caret::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 20%;
+  bottom: 20%;
+  width: 0.07em;
+  margin-left: 0.02em;
+  background: var(--ink);
+}
+.hero__char.is-blink::after {
+  animation: hero-blink 0.8s steps(1) infinite;
+}
+@keyframes hero-blink {
+  50% { opacity: 0; }
+}
+
+/* ---------- Coroa ---------- */
+.hero__crown {
+  height: 0.85em;
+  width: auto;
+  display: block;
+}
+
+/* ---------- Pessoa ---------- */
+.hero__person {
+  position: absolute;
+  bottom: -1cqw; /* folga para o parallax não revelar o corte embaixo */
+  left: 31.3%;
+  width: 38%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Prova social ---------- */
+.hero__proof {
+  position: absolute;
+  z-index: 3;
+  left: 7.4%;
+  bottom: 8%;
+  display: flex;
+  align-items: center;
+  gap: 0.6cqw;
+  font-size: 1.15cqw;
+  font-weight: 300;
+}
+.hero__avatars { display: flex; }
+.hero__avatars i {
+  width: 2cqw;
+  height: 2cqw;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8a7a72, #3a2f2a);
+  border: 1px solid var(--bg);
+  margin-left: -0.5cqw;
+}
+.hero__avatars i:first-child { margin-left: 0; }
