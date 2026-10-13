@@ -2,6 +2,7 @@ import './App.css'
 import NavBar from './components/NavBar'
 import Hero from './components/Hero'
 import InfiniteCarousel from './components/InfiniteCarousel'
+import Manifest from './components/Manifest'
 
 function App() {
 
@@ -20,9 +21,12 @@ function App() {
         title='O gueto oferece'
         speed={50}
         direction='right'
-        pauseOnHover={true}
+        pauseOnHover={false}
         fade={true}
          />
+      </section>
+      <section id='manifest'>
+        <Manifest />
       </section>
     </main>    
     </>
