@@ -1,0 +1,76 @@
+.carousel {
+  --carousel-gap: 4.5em;                       
+  --carousel-size: clamp(1rem, 1.25vw, 1.5rem);
+  --carousel-color: #1a1a1a;
+  --carousel-title-color: #4a4a4a;
+
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.75rem);
+  padding-block: clamp(1.5rem, 4vw, 3rem);
+  background: var(--bg, #fdf9f8);
+  color: var(--carousel-color);
+}
+
+/* ---------- Título com linhas laterais ---------- */
+.carousel__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--carousel-title-color);
+}
+.carousel__title::before,
+.carousel__title::after {
+  content: "";
+  width: 3rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+/* ---------- Esteira ---------- */
+.carousel__viewport {
+  width: 100%;
+  overflow: hidden;
+}
+.carousel--fade .carousel__viewport {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.carousel__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+.carousel__group,
+.carousel__set {
+  display: flex;
+  flex-shrink: 0;
+}
+.carousel__set {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* O espaço fica no padding (e não em "gap") para o grupo incluir o espaço
+   final e a emenda do loop ficar idêntica ao resto. */
+.carousel__item {
+  flex-shrink: 0;
+  padding-right: var(--carousel-gap);
+  font-size: var(--carousel-size);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

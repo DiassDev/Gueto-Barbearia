@@ -1,0 +1,35 @@
+.navigationCta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 16px;
+    width: auto;
+    height: 54px;
+    background-color: #DE372E;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.3s ease;
+}
+
+.navigationCta:hover {
+    background-color: #C93129;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(222, 55, 46, 0.16);
+}
+
+.navigationCta:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.navigationCta:focus-visible {
+    outline: 2px solid #DE372E;
+    outline-offset: 4px;
+}

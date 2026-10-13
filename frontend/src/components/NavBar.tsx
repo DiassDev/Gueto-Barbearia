@@ -1,5 +1,5 @@
 import './NavBar.css';
-
+import CtaButton from './CtaButton';
 
 function NavBar() {
 
@@ -13,7 +13,9 @@ function NavBar() {
                     <a>Sobre</a>
                     <a>Agenda</a>
                 </nav>
-                <button className='navigationCta'>Agendar meu horário</button>
+                <CtaButton
+                 text='Agendar meu horário'
+                 />
             </header>
         </>
     )
