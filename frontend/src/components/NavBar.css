@@ -230,7 +230,8 @@
     justify-content: center;
 }
 
-.mobileDrawerCta .navigationCta {
+.mobileDrawerCta .navigationCta,
+.mobileDrawerCta .ctaButton {
     width: 100%;
     justify-content: center;
 }

@@ -1,7 +1,10 @@
+.ctaButton,
 .navigationCta {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
+    font-family: inherit;
     font-weight: 600;
     font-size: 0.98rem;
     width: auto;
@@ -11,24 +14,48 @@
     border-radius: 8px;
     padding: 14px 34px;
     cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
     transition:
         background-color 0.3s ease,
         transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
         box-shadow 0.3s ease;
 }
 
+.ctaButton:hover,
 .navigationCta:hover {
     background-color: #C93129;
     transform: translateY(-2px);
-    box-shadow: 0 5px 14px rgba(222, 55, 46, 0.16);
+    box-shadow: 0 6px 18px rgba(222, 55, 46, 0.22);
 }
 
+.ctaButton:active,
 .navigationCta:active {
     transform: translateY(0);
     box-shadow: none;
 }
 
+.ctaButton:focus-visible,
 .navigationCta:focus-visible {
     outline: 2px solid #DE372E;
     outline-offset: 4px;
+}
+
+/* Modificador de largura total */
+.ctaButton--full {
+    width: 100%;
+}
+
+/* Seta animada */
+.ctaButtonArrow {
+    font-size: 1.3rem;
+    line-height: 1;
+    font-weight: 400;
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.ctaButton:hover .ctaButtonArrow,
+.navigationCta:hover .ctaButtonArrow {
+    transform: translateX(4px);
 }

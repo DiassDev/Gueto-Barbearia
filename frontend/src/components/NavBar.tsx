@@ -112,7 +112,7 @@ function NavBar() {
                     </nav>
 
                     <div className="mobileDrawerCta" onClick={handleLinkClick}>
-                        <CtaButton text="Agendar meu horário" />
+                        <CtaButton text="Agendar meu horário" fullWidth />
                     </div>
                 </div>
             </div>

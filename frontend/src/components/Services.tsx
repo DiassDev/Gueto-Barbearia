@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import ServiceCard from "./ServiceCard";
 import type { ServiceCardProps } from "./ServiceCard";
+import CtaButton from "./CtaButton";
 import { DEFAULT_SERVICES } from "../data/servicesData";
 import "./Services.css";
 
@@ -106,14 +107,12 @@ export const Services: React.FC<ServicesProps> = ({
                 </div>
 
                 <div className="servicesCtaWrapper" ref={ctaRef}>
-                    <button
-                        className="servicesCtaButton"
+                    <CtaButton
+                        text={ctaText}
+                        hasArrow={true}
                         onClick={onCtaClick}
-                        aria-label={ctaText}
-                    >
-                        <span>{ctaText}</span>
-                        <span className="servicesCtaArrow" aria-hidden="true">›</span>
-                    </button>
+                        ariaLabel={ctaText}
+                    />
                 </div>
             </div>
         </section>

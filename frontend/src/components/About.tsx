@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import aboutImg from "../assets/GuetoAbout.png";
+import CtaButton from "./CtaButton";
 import "./About.css";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -80,14 +81,12 @@ export const About: React.FC<AboutProps> = ({
                     </div>
 
                     <div className="aboutCtaWrapper">
-                        <button
-                            className="aboutCtaButton"
+                        <CtaButton
+                            text={ctaText}
+                            hasArrow={true}
                             onClick={onCtaClick}
-                            aria-label={ctaText}
-                        >
-                            <span>{ctaText}</span>
-                            <span className="aboutCtaArrow" aria-hidden="true">›</span>
-                        </button>
+                            ariaLabel={ctaText}
+                        />
                     </div>
                 </div>
 

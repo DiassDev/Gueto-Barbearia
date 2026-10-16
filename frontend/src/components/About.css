@@ -95,48 +95,6 @@
     margin-top: 4px;
 }
 
-.aboutCtaButton {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 0.98rem;
-    color: #FFFFFF;
-    background-color: #DE372E;
-    border: none;
-    border-radius: 8px;
-    padding: 14px 34px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: 
-        background-color 0.3s ease,
-        transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
-        box-shadow 0.3s ease;
-}
-
-.aboutCtaButton:hover {
-    transform: translateY(-2px);
-    background-color: #C93129;
-    box-shadow: 0 6px 18px rgba(222, 55, 46, 0.22);
-}
-
-.aboutCtaButton:active {
-    transform: translateY(0);
-}
-
-.aboutCtaArrow {
-    font-size: 1.3rem;
-    line-height: 1;
-    font-weight: 400;
-    transition: transform 0.25s ease;
-}
-
-.aboutCtaButton:hover .aboutCtaArrow {
-    transform: translateX(4px);
-}
-
 /* ---------- Coluna da Imagem ---------- */
 .aboutImageWrapper {
     display: flex;
@@ -188,7 +146,7 @@
         font-size: 2.2rem;
     }
 
-    .aboutCtaButton {
+    .aboutCtaWrapper .ctaButton {
         width: 100%;
         max-width: 320px;
     }
