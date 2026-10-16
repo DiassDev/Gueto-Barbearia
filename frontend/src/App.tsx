@@ -6,6 +6,7 @@ import Manifest from './components/Manifest'
 import Services from './components/Services'
 import About from './components/About'
 import Testimonials from './components/Testimonials'
+import Contact from './components/Contact'
 
 function App() {
 
@@ -39,6 +40,9 @@ function App() {
       </section>
       <section id='testimonials'>
         <Testimonials />
+      </section>
+      <section id='booking'>
+        <Contact />
       </section>
     </main>    
     </>

@@ -1,0 +1,343 @@
+/* ==========================================================================
+   Seção de Contato e Agendamento (Contact.tsx)
+   ========================================================================== */
+
+.contactSection {
+    position: relative;
+    width: 100%;
+    padding: 120px 24px;
+    background-color: var(--bg, #FFFBFB);
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.contactContainer {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 72px;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+/* ---------- Coluna da Esquerda: Textos e Informações ---------- */
+.contactContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contactSubtitle {
+    font-size: 0.85rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    background: linear-gradient(180deg, #2e2e2e, #6b6b6b);
+    opacity: 0.80;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.contactTitle {
+    font-size: clamp(2.3rem, 4vw, 3.2rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: #141414;
+    margin: 0 0 24px 0;
+}
+
+.contactHighlight {
+    color: #DE372E;
+    font-style: italic;
+}
+
+.contactDescription {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: rgba(20, 20, 20, 0.72);
+    margin: 0 0 44px 0;
+    max-width: 440px;
+}
+
+/* Grid de Informações (2 colunas) */
+.contactInfoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 32px;
+    width: 100%;
+    max-width: 480px;
+}
+
+.contactInfoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contactInfoLabel {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #141414;
+    letter-spacing: -0.01em;
+}
+
+.contactInfoValue,
+.contactInfoLink {
+    font-size: 0.9rem;
+    color: rgba(20, 20, 20, 0.7);
+    line-height: 1.4;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contactInfoLink:hover {
+    color: #DE372E;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ---------- Coluna da Direita: Card de Agendamento ---------- */
+.contactCardWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contactCard {
+    width: 100%;
+    max-width: 520px;
+    background-color: #FFFFFF;
+    border: 1.5px solid #DE372E;
+    border-radius: 8px;
+    padding: 38px 36px 34px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactCard:hover {
+    box-shadow: 0 16px 36px rgba(222, 55, 46, 0.1);
+}
+
+.contactCardHeader {
+    margin-bottom: 28px;
+}
+
+.contactCardTitle {
+    font-size: 1.15rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: #141414;
+    margin: 0 0 4px 0;
+}
+
+.contactCardSubtitle {
+    font-size: 0.85rem;
+    color: rgba(20, 20, 20, 0.6);
+    margin: 0;
+}
+
+/* Formulário e Campos */
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contactFormGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.contactFormLabel {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #141414;
+}
+
+.contactInput,
+.contactSelect {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    border: 1px solid rgba(222, 55, 46, 0.4);
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    font-family: inherit;
+    font-size: 0.88rem;
+    color: #141414;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.contactInput::placeholder {
+    color: rgba(20, 20, 20, 0.45);
+}
+
+.contactInput:focus,
+.contactSelect:focus {
+    border-color: #DE372E;
+    box-shadow: 0 0 0 3px rgba(222, 55, 46, 0.14);
+}
+
+/* Select customizado com seta */
+.contactSelectWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.contactSelect {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+.contactSelectArrow {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #DE372E;
+    font-size: 0.78rem;
+    pointer-events: none;
+    transition: transform 0.2s ease;
+}
+
+.contactSelect:focus+.contactSelectArrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Input Datetime */
+.contactInput--datetime {
+    cursor: pointer;
+}
+
+.contactInput--datetime::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(24%) sepia(85%) saturate(3475%) hue-rotate(349deg) brightness(88%) contrast(92%);
+    /* Tom avermelhado */
+    opacity: 0.85;
+}
+
+/* Botão de Envio */
+.contactSubmitWrapper {
+    margin-top: 8px;
+}
+
+.contactSuccessMsg {
+    margin: 8px 0 0 0;
+    font-size: 0.85rem;
+    color: #1b8a36;
+    font-weight: 600;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 960px) {
+    .contactContainer {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+
+    .contactCardWrapper {
+        justify-content: center;
+    }
+
+    .contactCard {
+        max-width: 580px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactSection {
+        padding: 90px 20px;
+    }
+
+    .contactTitle {
+        font-size: clamp(2rem, 6vw, 2.7rem);
+        margin-bottom: 18px;
+    }
+
+    .contactDescription {
+        margin-bottom: 34px;
+    }
+
+    .contactInfoGrid {
+        gap: 28px 24px;
+    }
+
+    .contactCard {
+        padding: 32px 24px 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactSection {
+        padding: 64px 16px;
+    }
+
+    .contactTitle {
+        font-size: clamp(1.85rem, 8vw, 2.3rem);
+    }
+
+    .contactDescription {
+        font-size: 0.92rem;
+        margin-bottom: 28px;
+    }
+
+    .contactInfoGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px 14px;
+    }
+
+    .contactInfoLabel {
+        font-size: 0.88rem;
+    }
+
+    .contactInfoValue,
+    .contactInfoLink {
+        font-size: 0.82rem;
+    }
+
+    .contactCard {
+        padding: 26px 18px 22px;
+        border-radius: 14px;
+    }
+
+    .contactCardTitle {
+        font-size: 1.05rem;
+    }
+
+    .contactInput,
+    .contactSelect {
+        height: 44px;
+        font-size: 0.84rem;
+    }
+}
