@@ -1,0 +1,131 @@
+.testimonialCard {
+    position: relative;
+    background-color: #FFFFFF;
+    border: 1.5px solid #DE372E;
+    border-radius: 16px;
+    padding: 28px 26px 26px;
+    width: 380px;
+    min-width: 320px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    transition: 
+        transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.testimonialCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(222, 55, 46, 0.14);
+}
+
+/* Cabeçalho do Card: Avatar e Info */
+.testimonialCardHeader {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.testimonialAvatarWrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1.5px solid #DE372E;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: var(--bg, #FFFBFB);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonialAvatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.testimonialAvatarPlaceholder {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #DE372E;
+    text-transform: uppercase;
+}
+
+.testimonialAuthorInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.testimonialName {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #141414;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.testimonialRole {
+    font-size: 0.78rem;
+    color: #777777;
+    margin-top: 2px;
+}
+
+.testimonialRating {
+    display: flex;
+    gap: 2px;
+    color: #DE372E;
+    font-size: 1rem;
+    margin-top: 4px;
+    line-height: 1;
+}
+
+.testimonialStar {
+    display: inline-block;
+}
+
+/* Citação / Depoimento */
+.testimonialQuote {
+    margin: 0;
+    display: block;
+}
+
+.testimonialText {
+    margin: 0;
+    color: #555555;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    display: inline;
+}
+
+.quoteSymbol {
+    color: #141414;
+    font-size: 1.45rem;
+    font-weight: 900;
+    line-height: 0;
+    vertical-align: -0.08em;
+    display: inline-block;
+    opacity: 0.95;
+    user-select: none;
+}
+
+.quoteOpen {
+    margin-right: 5px;
+}
+
+.quoteClose {
+    margin-left: 5px;
+}
+
+@media (max-width: 600px) {
+    .testimonialCard {
+        width: 320px;
+        min-width: 290px;
+        padding: 24px 20px 22px;
+    }
+}

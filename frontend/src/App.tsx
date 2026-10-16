@@ -5,6 +5,7 @@ import InfiniteCarousel from './components/InfiniteCarousel'
 import Manifest from './components/Manifest'
 import Services from './components/Services'
 import About from './components/About'
+import Testimonials from './components/Testimonials'
 
 function App() {
 
@@ -35,6 +36,9 @@ function App() {
       </section>
       <section id='about'>
         <About />
+      </section>
+      <section id='testimonials'>
+        <Testimonials />
       </section>
     </main>    
     </>

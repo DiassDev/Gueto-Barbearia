@@ -70,13 +70,13 @@ function Manifest() {
                 <div className="manifestLogo"></div>
                 <h3 className="manifestLogoLabel">since 2026</h3>
             </div>
-            
+
             <h1 className="manifestText" ref={textRef}>
                 {renderWrappedText("Cabelo não é só cabelo.")}
                 {renderWrappedText("É presença.", true)}
                 {renderWrappedText("É identidade.")}
                 {renderWrappedText("É cultura.", true)}
-                {renderWrappedText("É Chegar sabendo exatamente ")}
+                {renderWrappedText("É Chegar sabendo exatamente")}
                 {renderWrappedText("quem você é.", true)}
             </h1>
         </div>
