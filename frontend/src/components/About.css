@@ -1,0 +1,195 @@
+.aboutSection {
+    position: relative;
+    width: 100%;
+    padding: 120px 24px;
+    background-color: var(--bg, #FFFBFB);
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.aboutContainer {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 64px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* ---------- Coluna de Conteúdo ---------- */
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.aboutSubtitle {
+    font-size: 0.85rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    background: linear-gradient(180deg, #2e2e2e, #6b6b6b);
+    opacity: 0.80;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.aboutTitle {
+    font-size: clamp(2.2rem, 3.8vw, 3.1rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: #141414;
+    margin: 0 0 28px 0;
+}
+
+.aboutHighlight {
+    color: #DE372E;
+    font-style: italic;
+}
+
+/* ---------- Textos Descritivos ---------- */
+.aboutDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 490px;
+    margin-bottom: 36px;
+}
+
+.aboutText {
+    font-size: 0.96rem;
+    line-height: 1.65;
+    color: #555555;
+    margin: 0;
+}
+
+.aboutEmphasis {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+}
+
+.aboutMotto {
+    font-size: 0.96rem;
+    line-height: 1.5;
+    color: #555555;
+}
+
+.aboutStatement {
+    font-size: 1rem;
+    font-weight: 900;
+    color: #141414;
+    letter-spacing: -0.01em;
+}
+
+/* ---------- Botão CTA ---------- */
+.aboutCtaWrapper {
+    margin-top: 4px;
+}
+
+.aboutCtaButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.98rem;
+    color: #FFFFFF;
+    background-color: #DE372E;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 34px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 
+        background-color 0.3s ease,
+        transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.3s ease;
+}
+
+.aboutCtaButton:hover {
+    transform: translateY(-2px);
+    background-color: #C93129;
+    box-shadow: 0 6px 18px rgba(222, 55, 46, 0.22);
+}
+
+.aboutCtaButton:active {
+    transform: translateY(0);
+}
+
+.aboutCtaArrow {
+    font-size: 1.3rem;
+    line-height: 1;
+    font-weight: 400;
+    transition: transform 0.25s ease;
+}
+
+.aboutCtaButton:hover .aboutCtaArrow {
+    transform: translateX(4px);
+}
+
+/* ---------- Coluna da Imagem ---------- */
+.aboutImageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.aboutImage {
+    width: 100%;
+    max-width: 530px;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 960px) {
+    .aboutSection {
+        padding: 90px 20px;
+    }
+
+    .aboutContainer {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .aboutContent {
+        align-items: center;
+        text-align: center;
+    }
+
+    .aboutDescription {
+        align-items: center;
+    }
+
+    .aboutImage {
+        max-width: 460px;
+    }
+}
+
+@media (max-width: 600px) {
+    .aboutSection {
+        padding: 70px 16px;
+    }
+
+    .aboutTitle {
+        font-size: 2.2rem;
+    }
+
+    .aboutCtaButton {
+        width: 100%;
+        max-width: 320px;
+    }
+}

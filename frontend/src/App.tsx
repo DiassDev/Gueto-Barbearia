@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import InfiniteCarousel from './components/InfiniteCarousel'
 import Manifest from './components/Manifest'
 import Services from './components/Services'
+import About from './components/About'
 
 function App() {
 
@@ -31,6 +32,9 @@ function App() {
       </section>
       <section id='services'>
         <Services />
+      </section>
+      <section id='about'>
+        <About />
       </section>
     </main>    
     </>

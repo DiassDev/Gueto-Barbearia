@@ -2,15 +2,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 0.98rem;
     width: auto;
-    height: 54px;
     background-color: #DE372E;
     color: #FFFFFF;
     border: none;
     border-radius: 8px;
-    padding: 16px;
+    padding: 14px 34px;
     cursor: pointer;
     transition:
         background-color 0.3s ease,
