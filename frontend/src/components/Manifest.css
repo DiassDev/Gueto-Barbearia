@@ -1,11 +1,14 @@
 .manifestWrapper {
-    padding: 164px 15% 0;
+    padding: clamp(80px, 12vw, 160px) clamp(20px, 8vw, 15%) clamp(60px, 8vw, 100px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 0 auto;
+    max-width: 1280px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .manifestLogoWrapper {
@@ -13,12 +16,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 24px;
 }
 
 .manifestLogo {
     background-image: url('/GuetoLogo.png'); 
-    width: 100px;
-    height: 100px;
+    width: clamp(75px, 8vw, 100px);
+    height: clamp(75px, 8vw, 100px);
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat; 
@@ -29,15 +33,23 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-weight: lighter;
+    font-weight: 300;
     text-transform: uppercase;
     opacity: 0.80;
+    font-size: clamp(0.78rem, 1.2vw, 0.95rem);
+    letter-spacing: 0.14em;
+    margin-top: 6px;
+    margin-bottom: 0;
 }
 
 .manifestText {
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 3.4rem;
+    font-size: clamp(1.75rem, 4.5vw, 3.4rem);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    max-width: 1100px;
+    margin: 0;
 }
 
 /* Cada palavra vira um bloco indivisível para evitar cortes errados na quebra de linha */
@@ -56,4 +68,30 @@
 /* Letras individuais animadas */
 .manifestText .word span.char {
     display: inline-block;
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 768px) {
+    .manifestWrapper {
+        padding: 80px 20px 60px;
+    }
+
+    .manifestLogoWrapper {
+        margin-bottom: 18px;
+    }
+
+    .manifestText {
+        font-size: clamp(1.55rem, 6.2vw, 2.2rem);
+        line-height: 1.24;
+    }
+}
+
+@media (max-width: 480px) {
+    .manifestWrapper {
+        padding: 60px 16px 50px;
+    }
+
+    .manifestText {
+        font-size: clamp(1.4rem, 5.8vw, 1.8rem);
+    }
 }

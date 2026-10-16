@@ -122,10 +122,10 @@ export default function Hero() {
   return (
     <section className="hero" ref={root}>
       <div className="hero__stage">
-        <span className="hero__label">O gueto</span>
-
         {/* Camada de trás: texto */}
         <div className="hero__layer hero__layer--text" data-depth="-0.02">
+          <span className="hero__label">O gueto</span>
+
           <h1 className="hero__title" aria-label="Transforma seu cabelo em uma coroa">
             <span className="hero__stack hero__stack--left" aria-hidden="true">
               <span className="hero__line">
@@ -136,19 +136,21 @@ export default function Hero() {
               </span>
             </span>
 
-            <span className="hero__line hero__line--em" aria-hidden="true">
-              <Typed text="em" />
-            </span>
-
-            <span className="hero__stack hero__stack--right" aria-hidden="true">
-              <span className="hero__line">
-                <Typed text="uma" />
+            <span className="hero__row--bottom" aria-hidden="true">
+              <span className="hero__line hero__line--em">
+                <Typed text="em" />
               </span>
-              <span className="hero__line hero__line--crown">
-                <span className="hero__line-mask is-gray">
-                  <Typed text="coroa" />
+
+              <span className="hero__stack hero__stack--right">
+                <span className="hero__line">
+                  <Typed text="uma" />
                 </span>
-                <img className="hero__crown" src={crownImg} alt="" />
+                <span className="hero__line hero__line--crown">
+                  <span className="hero__line-mask is-gray">
+                    <Typed text="coroa" />
+                  </span>
+                  <img className="hero__crown" src={crownImg} alt="" />
+                </span>
               </span>
             </span>
           </h1>
