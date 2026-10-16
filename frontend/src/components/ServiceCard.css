@@ -1,0 +1,121 @@
+.serviceCard {
+    position: relative;
+    background-color: #FFFFFF;
+    border: 1.5px solid #DE372E;
+    border-radius: 16px;
+    padding: 38px 24px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 240px;
+    max-width: 290px;
+    min-width: 230px;
+    box-sizing: border-box;
+    transition: 
+        transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    cursor: default;
+}
+
+.serviceCard[role="button"] {
+    cursor: pointer;
+}
+
+.serviceCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(222, 55, 46, 0.14);
+    border-color: #DE372E;
+}
+
+/* Ícone flutuante sobre a borda superior esquerda */
+.serviceCardIconWrapper {
+    position: absolute;
+    top: -20px;
+    left: 24px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--bg, #FFFBFB);
+    border: 1.5px solid #DE372E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 2;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease;
+}
+
+.serviceCard:hover .serviceCardIconWrapper {
+    transform: scale(1.08);
+}
+
+.serviceCardIcon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Badge opcional */
+.serviceCardBadge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(90deg, #781E19, #DE372E);
+    color: #FFFFFF;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 10px;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(222, 55, 46, 0.25);
+}
+
+/* Título */
+.serviceCardTitle {
+    color: #DE372E;
+    font-size: 1.15rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin: 8px 0 14px 0;
+    line-height: 1.25;
+}
+
+/* Descrição */
+.serviceCardDescription {
+    color: #555555;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin: 0 0 24px 0;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Preço */
+.serviceCardPrice {
+    color: #DE372E;
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    margin-top: auto;
+    padding-top: 8px;
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .serviceCard {
+        max-width: 100%;
+        min-width: 100%;
+        padding: 34px 20px 26px;
+    }
+
+    .serviceCardDescription {
+        min-height: auto;
+    }
+}

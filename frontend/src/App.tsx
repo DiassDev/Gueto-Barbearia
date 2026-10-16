@@ -3,6 +3,7 @@ import NavBar from './components/NavBar'
 import Hero from './components/Hero'
 import InfiniteCarousel from './components/InfiniteCarousel'
 import Manifest from './components/Manifest'
+import Services from './components/Services'
 
 function App() {
 
@@ -27,6 +28,9 @@ function App() {
       </section>
       <section id='manifest'>
         <Manifest />
+      </section>
+      <section id='services'>
+        <Services />
       </section>
     </main>    
     </>

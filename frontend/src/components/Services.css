@@ -1,0 +1,147 @@
+.servicesSection {
+    position: relative;
+    width: 100%;
+    padding: 140px 24px 100px;
+    background-color: var(--bg, #FFFBFB);
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.servicesContainer {
+    width: 100%;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* ---------- Cabeçalho da seção ---------- */
+.servicesHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.servicesSubtitle {
+    font-size: 0.85rem;
+    font-weight: light;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    background: linear-gradient(180deg, #2e2e2e, #6b6b6b);
+    opacity: 0.80;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.servicesTitle {
+    font-size: clamp(2rem, 3.8vw, 2.8rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: #141414;
+    margin: 0;
+    line-height: 1.1;
+}
+
+/* ---------- Grid Adaptativo e Centralizado ---------- */
+.servicesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px 28px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* ---------- Botão de Ação Inferior ---------- */
+.servicesCtaWrapper {
+    margin-top: 54px;
+    display: flex;
+    justify-content: center;
+}
+
+.servicesCtaButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.98rem;
+    color: #FFFFFF;
+    background-color: #DE372E;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 34px;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.3s ease;
+}
+
+.servicesCtaButton:hover {
+    transform: translateY(-2px);
+}
+
+.servicesCtaButton:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(222, 55, 46, 0.2);
+}
+
+.servicesCtaArrow {
+    font-size: 1.3rem;
+    line-height: 1;
+    font-weight: 400;
+    transition: transform 0.25s ease;
+}
+
+.servicesCtaButton:hover .servicesCtaArrow {
+    transform: translateX(4px);
+}
+
+/* ---------- Responsividade ---------- */
+@media (max-width: 900px) {
+    .servicesSection {
+        padding: 100px 20px 80px;
+    }
+
+    .servicesHeader {
+        margin-bottom: 48px;
+    }
+
+    .servicesGrid {
+        gap: 28px 20px;
+    }
+
+    .servicesCtaWrapper {
+        margin-top: 42px;
+    }
+}
+
+@media (max-width: 600px) {
+    .servicesSection {
+        padding: 80px 16px 60px;
+    }
+
+    .servicesGrid {
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+    }
+
+    .servicesCtaButton {
+        width: 100%;
+        max-width: 320px;
+    }
+}
